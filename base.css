@@ -1,0 +1,42 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1 rem;
+}
+
+header, footer {
+    text-align: center;
+    padding: 1rem;
+} 
+
+#course-title {
+    display: block;
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #005599;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    backgound-color: #ccc;
+}
+
+main{
+    display: grid;
+    gap: 1rem;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+}
