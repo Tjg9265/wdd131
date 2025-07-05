@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     max-width: 900px;
     margin: 0 auto;
-    padding: 1 rem;
+    padding: 1rem;
 }
 
 header, footer {
@@ -28,7 +28,7 @@ nav a {
 }
 
 nav a:hover {
-    backgound-color: #ccc;
+    background-color: #ccc;
 }
 
 main{
