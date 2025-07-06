@@ -40,3 +40,9 @@ main{
     border: 1px solid #ddd;
     padding: 1rem;
 }
+
+section img {
+    width: 250px;
+    height: 250px;
+    align-items: auto;
+}
