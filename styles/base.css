@@ -5,9 +5,16 @@ body {
     padding: 1rem;
 }
 
+.card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
 header, footer {
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
 } 
 
 #course-title {
@@ -44,8 +51,10 @@ main{
     padding: 1rem;
 }
 
-section img {
-    width: 250px;
-    height: 250px;
-    align-items: auto;
+section img,
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
