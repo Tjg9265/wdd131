@@ -24,6 +24,7 @@ header, footer {
     display: block;
     font-size: 1.5rem;
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
 nav {
@@ -89,4 +90,8 @@ img {
     width: 60px;
     height: auto;
     margin-right: 10px;
+}
+
+.highlight-name {
+    color: #ffe600; /* Yellow-Gold */
 }
