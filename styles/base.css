@@ -44,6 +44,7 @@ nav a:hover {
 main{
     display: grid;
     gap: 1rem;
+    grid-template-columns: 1fr 1fr;
 }
 
 .card {
@@ -57,4 +58,16 @@ img {
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.flag {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
 }
