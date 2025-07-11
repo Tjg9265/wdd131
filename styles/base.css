@@ -1,8 +1,9 @@
 body {
     font-family: 'Roboto', sans-serif;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 1rem;
+    background-color: #f4f4f4;
 }
 
 .card {
@@ -10,6 +11,8 @@ body {
     padding: 1rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     background-color: white;
+    color: black;
+    text-align: center;
 }
 
 header, footer {
@@ -20,36 +23,52 @@ header, footer {
 #course-title {
     display: block;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
 nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 0.5rem;
+    background-color: #222;
+    flex-wrap: wrap;
 }
 
 nav a {
     text-decoration: none;
-    color: #005599;
+    color: white;
     transition: background-color 0.3s;
+    margin: 0 1rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
 }
 
 nav a:hover {
-    background-color: #e0e0e0;
+    background-color:#444;
     color:#000;
     border-radius: 5px;
     padding:0.2rem 0.5rem;
 }
 
-main{
+main.grid-container {
     display: grid;
-    gap: 1rem;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
 }
 
-.card {
-    border: 1px solid #ddd;
-    padding: 1rem;
+@media (max-width: 768px) {
+    main.grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+header,
+footer {
+    background-color: #244b66;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
 }
 
 section img,
