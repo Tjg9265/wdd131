@@ -1,0 +1,57 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+}
+
+header, footer {
+  background-color: #244b66;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  background-color: #222;
+  padding: 0.5rem;
+}
+
+nav a:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+#menu {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.temple-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+figure {
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

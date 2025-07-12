@@ -1,0 +1,15 @@
+@media (min-width: 700px) {
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .temple-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
