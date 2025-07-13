@@ -1,11 +1,22 @@
+// Hamburger menu
 const menuButton = document.getElementById('menu');
 const navigation = document.querySelector('.navigation');
 
-menuButton.addEventListener('click', () => {
-  navigation.classList.toggle('open');
-  menuButton.textContent = navigation.classList.contains('open') ? '✖' : '☰';
-});
+if (menuButton && navigation) {
+  menuButton.addEventListener('click', () => {
+    navigation.classList.toggle('open');
+    menuButton.textContent = navigation.classList.contains('open') ? '✖' : '☰';
+  });
+}
 
-// Footer JS
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
+// Footer year
+const yearSpan = document.getElementById('year');
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
+
+// Footer last modified
+const modifiedSpan = document.getElementById('lastModified');
+if (modifiedSpan) {
+  modifiedSpan.textContent = `Last Modified: ${document.lastModified}`;
+}
