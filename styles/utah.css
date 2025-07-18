@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.weather-card {
+  text-align: center;
+  margin: 2rem;
+}
+
+.mobile-icon {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+#emoji::after {
+  content: "😊";
+}
