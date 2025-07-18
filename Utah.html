@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
-        <meta name="Viewport" content="width=device-width, initail-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="description" content="W03 Country page"/>
         <meta name="author" content="Thomas Garcia"/>
         <title>W03 Country Page</title>
@@ -16,23 +16,30 @@
         <main>
             <picture>
                 <source srcset="../wdd131/images/utah-hero-large.webp" media="(min-width:600px)"/>
-                <img src="../wdd131/images/utah-hero-small.webp" alt=""/>
+                <img src="../wdd131/images/utah-hero-small.webp" alt="Scenic landscape in Utah"/>
             </picture>
             <section class="weather-card">
                 <h2>Weather</h2>
                 <div class="icon-and-temp">
-                    <img src="../wdd131/images/cloud-sun.webp" alt="Partly cloudy" class="mobile-icon"/>
+                    <img src="../wdd131/images/cloud-sun.webp" alt="Partly cloudy" class="svg-icon"/>
                     <p>Temperature:<span id="temp">86</span>°F</p>
-                    <p>Wind Speed:<span id="speed">0</span>mph</p>
-                    <p id="windChillOutput"></p>
+                    <p>Wind Speed: <span id="speed">0</span> mph</p>
+                    <p>Wind Chill: <span id="windchill">N/A</span></p>
                 </div>
+            </section>
+            <section class="details">
+                <h2>About Utah</h2>
+                <ul>
+                    <li>Capital: Salt Lake City</li>
+                    <li>Population: 3.3 million</li>
+                    <li>Elevation: 6,100 ft</li>
+                </ul>
             </section>
         </main>
         <footer>
             <p>&copy;<span id="year"></span> |Thomas Garcia| UT Utah<span id="emoji"></span></p>
-            <p>Last Modified:<span id="lastmodified"></span></p>
+            <p>Last Modified:<span id="lastModified"></span></p>
         </footer>
-        <script src="scripts/windchill.js"></script>
-        <script src="scripts/getdates.js"></script>
+        <script src="scripts/utah.js"></script>
     </body>
 </html>

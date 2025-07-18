@@ -26,3 +26,30 @@ header, footer {
 #emoji::after {
   content: "😊";
 }
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.details {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+}
+.details ul {
+  list-style: none;
+  padding: 0;
+}
+.details li {
+  margin: 0.5rem 0;
+}
+
+.svg-icon {
+  display: none;
+  width: 100px;
+  margin: 0 auto;
+}
