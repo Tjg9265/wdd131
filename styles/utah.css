@@ -116,8 +116,8 @@ main {
 }
 
 .svg-icon {
-  display: none;
-  width: 1000px;
+  display: block;
+  width: auto;
   margin: 0 auto;
 }
 
