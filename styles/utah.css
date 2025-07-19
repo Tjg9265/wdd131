@@ -53,3 +53,9 @@ main {
   width: 100px;
   margin: 0 auto;
 }
+
+picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

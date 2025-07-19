@@ -14,14 +14,17 @@
             <h1>Explore Utah</h1>
         </header>
         <main>
-            <picture>
-                <source src="../wdd131/images/utah-hero-large.webp" media="(min-width:600px)"/>
-                <img src="../wdd131/images/utah-hero-small.webp" alt="Scenic landscape in Utah"/>
-            </picture>
+           <picture>
+                <img 
+                    src="../wdd131/images/utah-hero-large.webp"
+                    srcset="images/utah-hero-small.webp 600w, images/utah-hero-large.webp 1200w"
+                    sizes="(min-width: 600px) 100vw, 100vw"
+                    alt="Scenic landscape in Utah"
+                />
             <section class="weather-card">
                 <h2>Weather</h2>
                 <div class="icon-and-temp">
-                    <img src="../wdd131/images/cloud-sun.webp" alt="Partly cloudy" class="svg-icon"/>
+                    <img src="../wdd131/images/cloud-sun.svg" alt="Partly cloudy" class="svg-icon"/>
                     <p>Temperature:<span id="temp">86</span>°F</p>
                     <p>Wind Speed: <span id="speed">0</span> mph</p>
                     <p>Wind Chill: <span id="windchill">N/A</span></p>
