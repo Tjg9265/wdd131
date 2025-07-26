@@ -10,15 +10,21 @@ header, footer {
   color: white;
   padding: 1rem;
   text-align: center;
+  position: relative; /* for absolute children */
 }
 
+/* Navigation container */
 nav {
-  display: none;
-  flex-direction: column;
-  gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
   margin-top: 0.5rem;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: flex-start;
 }
 
+/* Nav links */
 nav a {
   color: white;
   text-decoration: none;
@@ -31,53 +37,127 @@ nav a:hover {
   color: #fff;
 }
 
+/* Hamburger button - always visible, top-right, centered vertically relative to header */
 #menu {
-  display: block;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  color:white;
+   display: block !important;
+  position: absolute !important;
+  top: 1rem !important;
+  right: 1rem !important;
+  font-size: 2rem !important;
+  background: none !important;
+  border: none !important;
+  color: white !important;
+  cursor: pointer !important;
+  z-index: 9999 !important;
 }
 
+/* Temple grid */
 .temple-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  padding-top: 1rem;
+  padding: 1rem 0 0 0;
 }
 
 figure {
   text-align: center;
 }
 
-figure img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.temple-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 1rem;
-}
-
+figure img,
 .temple-grid img {
   width: 100%;
   height: auto;
   display: block;
 }
 
+/* Navigation menu: hidden by default */
 .navigation {
   display: none;
   flex-direction: column;
+  background-color: #244b66; /* match header color */
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+  padding: 1rem;
   gap: 1rem;
+  border-radius: 4px;
+  z-index: 15;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
 }
 
+/* Show menu when open */
 .navigation.open {
   display: flex;
+}
+
+/* Nav links inside menu */
+.navigation a {
+  color: white;
+  padding: 0.5rem;
+  text-decoration: none;
+  background-color: #222;
+  border-radius: 3px;
+}
+
+.navigation a:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+/* Clear floats if any */
+nav::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Remove any float on buttons */
+button {
+  float: none;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  /* Keep hamburger visible on desktop */
+  #menu {
+    display: block;
+  }
+
+  /* Show navigation only when open */
+  .navigation {
+    /* Keep hidden by default, shown only when open */
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #244b66;
+    width: auto;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    gap: 1rem;
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+
+  .navigation a {
+    background: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 0;
+  }
+
+  .navigation a:hover {
+    background-color: #444;
+  }
+  
+  /* Temple grid columns */
+  .temple-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
