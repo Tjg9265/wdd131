@@ -1,72 +1,122 @@
-[
+ [
   {
     "templeName": "Salt Lake Temple",
     "location": "Salt Lake City, Utah",
-    "dedicated": "1893",
-    "area": 253015,
-    "imageUrl": "images/salt-lake.jpg"
+    "imageUrl": "../wdd131/images/salt_lake_tempel_1.webp"
   },
   {
-    "templeName": "Laie Hawaii Temple",
-    "location": "Laie, Hawaii",
-    "dedicated": "1919",
-    "area": 47232,
-    "imageUrl": "images/laie-hawaii.jpg"
+    "templeName": "Salt Lake Temple",
+    "location": "Salt Lake City, Utah",
+    "imageUrl": "../wdd131/images/salt_lake_temple_2.webp"
   },
   {
-    "templeName": "Cardston Alberta Temple",
-    "location": "Cardston, Alberta, Canada",
-    "dedicated": "1923",
-    "area": 88062,
-    "imageUrl": "images/cardston-alberta.jpg"
+    "templeName": "Los Angeles California Temple",
+    "location": "Los Angeles, California",
+    "imageUrl": "../wdd131/images/los_angeles_temple_1.webp"
   },
   {
-    "templeName": "Manti Utah Temple",
-    "location": "Manti, Utah",
-    "dedicated": "1888",
-    "area": 74792,
-    "imageUrl": "images/manti.jpg"
+    "templeName": "Los Angeles California Temple",
+    "location": "Los Angeles, California",
+    "imageUrl": "../wdd131/images/los_angeles_temple_2.png"
   },
   {
     "templeName": "Rome Italy Temple",
     "location": "Rome, Italy",
-    "dedicated": "2019",
-    "area": 41010,
-    "imageUrl": "images/rome.jpg"
+    "imageUrl": "../wdd131/images/rome_italy_temple_1.webp"
   },
   {
-    "templeName": "Payson Utah Temple",
-    "location": "Payson, Utah",
-    "dedicated": "2015",
-    "area": 96630,
-    "imageUrl": "images/payson.jpg"
-  },
-  {
-    "templeName": "Paris France Temple",
-    "location": "Le Chesnay, France",
-    "dedicated": "2017",
-    "area": 44000,
-    "imageUrl": "images/paris.jpg"
-  },
-  {
-    "templeName": "Mesa Arizona Temple",
-    "location": "Mesa, Arizona",
-    "dedicated": "1927",
-    "area": 113916,
-    "imageUrl": "images/mesa.jpg"
+    "templeName": "Rome Italy Temple",
+    "location": "Rome, Italy",
+    "imageUrl": "../wdd131/images/rome_italy_temple_2.jpg"
   },
   {
     "templeName": "Tokyo Japan Temple",
     "location": "Tokyo, Japan",
-    "dedicated": "1980",
-    "area": 52954,
-    "imageUrl": "images/tokyo.jpg"
+    "imageUrl": "../wdd131/images/tokyo_japan_temple_1.webp"
   },
   {
-    "templeName": "Nauvoo Illinois Temple",
-    "location": "Nauvoo, Illinois",
-    "dedicated": "2002",
-    "area": 54000,
-    "imageUrl": "images/nauvoo.jpg"
+    "templeName": "Tokyo Japan Temple",
+    "location": "Tokyo, Japan",
+    "imageUrl": "../wdd131/images/tokyo_japan_temple_2.jpg"
+  },
+  {
+    "templeName": "Mexico City Mexico Temple",
+    "location": "Mexico City, Mexico",
+    "imageUrl": "../wdd131/images/mexico_city_temple_1.webp"
+  },
+  {
+    "templeName": "Mexico City Mexico Temple",
+    "location": "Mexico City, Mexico",
+    "imageUrl": "../wdd131/images/mexico_city_tempel_2.jpg"
+  },
+  {
+    "templeName": "Accra Ghana Temple",
+    "location": "Accra, Ghana",
+    "imageUrl": "../wdd131/images/accra_ghana_temple_1.jpeg"
+  },
+  {
+    "templeName": "Accra Ghana Temple",
+    "location": "Accra, Ghana",
+    "imageUrl": "../wdd131/images/accra_ghana_temple_2.jpeg"
+  },
+  {
+    "templeName": "Mount Timpanogos Temple",
+    "location": "American Fork, Utah",
+    "imageUrl": "../wdd131/images/mount_timpanogos_temple_1.webp"
+  },
+  {
+    "templeName": "Mount Timpanogos Temple",
+    "location": "American Fork, Utah",
+    "imageUrl": "../wdd131/images/mount_timpanogos_temple_2.jpg"
+  },
+  {
+    "templeName": "Kansas City Temple",
+    "location": "Kansas City, Missouri",
+    "imageUrl": "../wdd131/images/kansas-city-1.jpg"
+  },
+  {
+    "templeName": "Kansas City Temple",
+    "location": "Kansas City, Missouri",
+    "imageUrl": "../wdd131/images/kansas-city-2.jpg"
+  },
+  {
+    "templeName": "Kansas City Temple",
+    "location": "Kansas City, Missouri",
+    "imageUrl": "../wdd131/images//kansas-city-3.jpg"
+  },
+  {
+    "templeName": "Kansas City Temple",
+    "location": "Kansas City, Missouri",
+    "imageUrl": "../wdd131/images//kansas-city-4.jpg"
+  },
+  {
+    "templeName": "Kansas City Temple",
+    "location": "Kansas City, Missouri",
+    "imageUrl": "../wdd131/images//kansas-city-5.jpg"
+  },
+  {
+    "templeName": "Kansas City Temple",
+    "location": "Kansas City, Missouri",
+    "imageUrl": "../wdd131/images//kansas-city-6.jpg"
+  },
+  {
+    "templeName": "Kansas City Temple",
+    "location": "Kansas City, Missouri",
+    "imageUrl": "../wdd131/images//kansas-city-7.jpg"
+  },
+  {
+    "templeName": "Kansas City Temple",
+    "location": "Kansas City, Missouri",
+    "imageUrl": "../wdd131/images//kansas-city-8.jpg"
+  },
+  {
+    "templeName": "Kansas City Temple",
+    "location": "Kansas City, Missouri",
+    "imageUrl": "../wdd131/images//kansas-city-9.jpg"
+  },
+  {
+    "templeName": "Kansas City Temple",
+    "location": "Kansas City, Missouri",
+    "imageUrl": "../wdd131/images//kansas-city-10.jpg"
   }
 ]
