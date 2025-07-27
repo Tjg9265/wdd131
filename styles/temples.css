@@ -120,10 +120,7 @@ button {
 
 /* Responsive adjustments */
 @media (min-width: 768px) {
-  /* Keep hamburger visible on desktop */
-  #menu {
-    display: block;
-  }
+  
 
   /* Show navigation only when open */
   .navigation {
@@ -139,6 +136,7 @@ button {
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     gap: 1rem;
+    justify-content: center;
   }
 
   .navigation.open {
