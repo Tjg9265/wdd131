@@ -1,0 +1,72 @@
+[
+  {
+    "templeName": "Salt Lake Temple",
+    "location": "Salt Lake City, Utah",
+    "dedicated": "1893",
+    "area": 253015,
+    "imageUrl": "images/salt-lake.jpg"
+  },
+  {
+    "templeName": "Laie Hawaii Temple",
+    "location": "Laie, Hawaii",
+    "dedicated": "1919",
+    "area": 47232,
+    "imageUrl": "images/laie-hawaii.jpg"
+  },
+  {
+    "templeName": "Cardston Alberta Temple",
+    "location": "Cardston, Alberta, Canada",
+    "dedicated": "1923",
+    "area": 88062,
+    "imageUrl": "images/cardston-alberta.jpg"
+  },
+  {
+    "templeName": "Manti Utah Temple",
+    "location": "Manti, Utah",
+    "dedicated": "1888",
+    "area": 74792,
+    "imageUrl": "images/manti.jpg"
+  },
+  {
+    "templeName": "Rome Italy Temple",
+    "location": "Rome, Italy",
+    "dedicated": "2019",
+    "area": 41010,
+    "imageUrl": "images/rome.jpg"
+  },
+  {
+    "templeName": "Payson Utah Temple",
+    "location": "Payson, Utah",
+    "dedicated": "2015",
+    "area": 96630,
+    "imageUrl": "images/payson.jpg"
+  },
+  {
+    "templeName": "Paris France Temple",
+    "location": "Le Chesnay, France",
+    "dedicated": "2017",
+    "area": 44000,
+    "imageUrl": "images/paris.jpg"
+  },
+  {
+    "templeName": "Mesa Arizona Temple",
+    "location": "Mesa, Arizona",
+    "dedicated": "1927",
+    "area": 113916,
+    "imageUrl": "images/mesa.jpg"
+  },
+  {
+    "templeName": "Tokyo Japan Temple",
+    "location": "Tokyo, Japan",
+    "dedicated": "1980",
+    "area": 52954,
+    "imageUrl": "images/tokyo.jpg"
+  },
+  {
+    "templeName": "Nauvoo Illinois Temple",
+    "location": "Nauvoo, Illinois",
+    "dedicated": "2002",
+    "area": 54000,
+    "imageUrl": "images/nauvoo.jpg"
+  }
+]

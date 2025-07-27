@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Temple Picture Album" />
+  <meta name="author" content="Thomas Garcia" />
+  <title>Temple Album</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Temple Picture Album</h1>
+    <button id="menu">☰</button>
+    <nav class="navigation">
+      <a href="index.html">Home</a>
+      <a href="filtered-temples.html" class="active">Temples</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="filters">
+      <button onclick="filterTemples('all')">Home</button>
+      <button onclick="filterTemples('old')">Old</button>
+      <button onclick="filterTemples('new')">New</button>
+      <button onclick="filterTemples('large')">Large</button>
+      <button onclick="filterTemples('small')">Small</button>
+    </section>
+
+    <div id="temple-cards" class="temple-container">
+      <!-- Temple cards will be dynamically inserted here -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | Thomas Garcia</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/temples.js"></script>
+  <script src="scripts/getdates.js"></script>
+</body>
+</html>

@@ -5,9 +5,7 @@
     justify-content: center;
   }
 
-  #menu {
-    display: none;
-  }
+  /* Removed the #menu display:none to keep hamburger visible always */
 
   .navigation {
     display: flex !important;
@@ -25,13 +23,13 @@
     margin: 0 0.5rem;
   }
 
-  .temple-grid {
+  .temple-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
 @media screen and (min-width: 640px) {
-  .temple-grid {
+  .temple-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
