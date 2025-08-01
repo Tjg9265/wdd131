@@ -1,49 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Temple Picture Album" />
-        <meta name="author" content="Thomas Garcia" />
-        <title>Temple Album</title>
-        <link rel="stylesheet" href="styles/base.css" />
-        <link rel="stylesheet" href="styles/larger.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-    </head>
-    <body>
-        <header>
-            <h1>Temple Picture Album</h1>
-            <button id="menu">☰</button>
-            <nav class="navigation">
-            <a href="index.html">Home</a>
-            <a href="temples.html">Temples</a>
-            <a href="filtered-temples.html" class="active">Temples</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            </nav>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Temple Picture Album" />
+    <meta name="author" content="Thomas Garcia" />
+    <title>Temple Album</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <link rel="stylesheet" href="styles/filtered-temples.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Temple Picture Album</h1>
+      <button id="menu" aria-label="Toggle navigation menu">☰</button>
+      <nav class="navigation" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="temples.html">All Temples</a></li>
+          <li><a href="filtered-temples.html" class="active">Filtered Temples</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <main>
-            <section class="filters">
-                <button onclick="filterTemples('all')">Home</button>
-                <button onclick="filterTemples('old')">Old</button>
-                <button onclick="filterTemples('new')">New</button>
-                <button onclick="filterTemples('large')">Large</button>
-                <button onclick="filterTemples('small')">Small</button>
-            </section>
+    <main>
+      <section class="filters" aria-label="Temple filters">
+        <button type="button" data-filter="all">Home</button>
+        <button type="button" data-filter="old">Old</button>
+        <button type="button" data-filter="new">New</button>
+        <button type="button" data-filter="large">Large</button>
+        <button type="button" data-filter="small">Small</button>
+      </section>
 
-            <div id="temple-cards" class="temple-grid">
-                <!-- Cards will be injected here by JS -->
-            </div>
-        </main>
-        <footer>
-            <p>&copy; <span id="year"></span> | Thomas Garcia</p>
-            <p>Last Modified: <span id="lastModified"></span></p>
-        </footer>
+      <div id="temple-cards" class="temple-grid" tabindex="0">
+        <!-- Cards will be injected here by JS -->
+      </div>
+    </main>
 
-        <script src="scripts/temples.js"></script>
-        <script src="scripts/getdates.js"></script>
-    </body>
+    <footer>
+      <p>&copy; <span id="year"></span> | Thomas Garcia</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/temples.js"></script>
+    <script src="scripts/getdates.js"></script>
+    <script>
+      // Attach event listeners for filter buttons (cleaner than inline onclick)
+      document.querySelectorAll('.filters button').forEach(button => {
+        button.addEventListener('click', () => {
+          const filterValue = button.getAttribute('data-filter');
+          if (typeof filterTemples === 'function') {
+            filterTemples(filterValue);
+          } else {
+            console.warn('filterTemples function is not defined.');
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
