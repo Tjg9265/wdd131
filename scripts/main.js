@@ -47,15 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let allTemples = [];
 
   // Fetch temple data and initialize
-  fetch(url)
-    .then(res => res.json())
-    .then(data => {
-      allTemples = groupTemplesByName(data);
-      outputTemples(allTemples);
-      setupFilterButtons();
-    })
-    .catch(error => console.error("Error fetching temples data:", error));
-
+  fetch("data/temples.json")
+  .then(res => res.json())
+  .then(data => {
+    // your code to handle data here
+  })
+  .catch(error => console.error("Error fetching temples data:", error));
   // Group temples by name and aggregate images
   function groupTemplesByName(temples) {
     const grouped = {};
@@ -138,3 +135,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
