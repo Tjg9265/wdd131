@@ -101,6 +101,32 @@ body {
   outline-offset: 3px;
 }
 
+.filters {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.filters button {
+  margin: 0.3rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filters button:hover,
+.filters button:focus {
+  background-color: #0056b3;
+  outline: 2px solid #fff;
+}
+
+.filters button[aria-pressed="true"] {
+  background-color: #28a745;
+}
+
 /* Responsive tweaks for smaller screens */
 @media (max-width: 480px) {
   .temple-info h3 {
@@ -181,3 +207,14 @@ footer {
   font-size: 0.9rem;
   letter-spacing: normal;
 }
+
+.navigation {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navigation.open {
+  display: flex;
+}
+

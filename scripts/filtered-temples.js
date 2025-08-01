@@ -1,4 +1,14 @@
 const url = "../wdd131/data/temples.json";
+let allTemples = [];
+
+document.getElementById('menu').addEventListener('click', function () {
+  const nav = document.querySelector('.navigation');
+  nav.classList.toggle('open');
+
+  // accessibility toggle
+  const expanded = this.getAttribute('aria-expanded') === 'true';
+  this.setAttribute('aria-expanded', !expanded);
+});
 
 fetch(url)
   .then(res => res.json())
@@ -55,4 +65,25 @@ function outputTemples(temples) {
 
     container.appendChild(card);
   });
+}
+
+function filterTemples(filter) {
+  let filtered = allTemples;
+
+  switch (filter) {
+    case 'old':
+      filtered = allTemples.filter(t => new Date(t.dedicated) < new Date('1950-01-01'));
+      break;
+    case 'new':
+      filtered = allTemples.filter(t => new Date(t.dedicated) > new Date('2000-01-01'));
+      break;
+    case 'large':
+      filtered = allTemples.filter(t => t.area > 90000);
+      break;
+    case 'small':
+      filtered = allTemples.filter(t => t.area < 10000);
+      break;
+  }
+
+  displayTemples(filtered);
 }
