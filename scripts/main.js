@@ -50,7 +50,14 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("data/temples.json")
   .then(res => res.json())
   .then(data => {
-    // your code to handle data here
+    // Group temples by name and images
+    allTemples = groupTemplesByName(data);
+
+    // Show all temples initially
+    outputTemples(allTemples);
+
+    // Setup filter buttons
+    setupFilterButtons();
   })
   .catch(error => console.error("Error fetching temples data:", error));
   // Group temples by name and aggregate images
