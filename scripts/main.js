@@ -21,182 +21,25 @@ document.addEventListener("DOMContentLoaded", () => {
     lastModifiedEl.textContent = document.lastModified;
   }
 
-  // --------- Wind chill calculation ---------
-  const tempEl = document.getElementById("temp");
-  const speedEl = document.getElementById("speed");
-  const windChillEl = document.getElementById("windchill");
-  if (tempEl && speedEl && windChillEl) {
-    const temp = parseFloat(tempEl.textContent);
-    const speed = parseFloat(speedEl.textContent);
-    if (!isNaN(temp) && !isNaN(speed)) {
-      if (temp <= 50 && speed > 3) {
-        const chill =
-          35.74 +
-          0.6215 * temp -
-          35.75 * Math.pow(speed, 0.16) +
-          0.4275 * temp * Math.pow(speed, 0.16);
-        windChillEl.textContent = `${chill.toFixed(1)} °F`;
-      } else {
-        windChillEl.textContent = "N/A";
-      }
-    }
-  }
-
-  // --------- Temple JSON fetch, grouping, displaying & filtering ---------
-  const url = "../wdd131/data/temples.json";
+  // --------- Variables ---------
   let allTemples = [];
-  const temples = [
-  {
-    templeName: "Salt Lake Temple",
-    location: "Salt Lake City, Utah",
-    dedicated: "1893-04-06",
-    area: 253015,
-    images: [
-      "../wdd131/images/salt_lake_temple_1.webp",
-      "../wdd131/images/salt_lake_temple_2.webp"
-    ]
-  },
-  {
-    templeName: "Los Angeles California Temple",
-    location: "Los Angeles, California",
-    dedicated: "1956-03-11",
-    area: 89000,
-    images: [
-      "../wdd131/images/los_angeles_temple_1.webp",
-      "../wdd131/images/los_angeles_temple_2.png"
-    ]
-  },
-  {
-    templeName: "Rome Italy Temple",
-    location: "Rome, Italy",
-    dedicated: "2019-03-10",
-    area: 58000,
-    images: [
-      "../wdd131/images/rome_italy_temple_1.webp",
-      "../wdd131/images/rome_italy_temple_2.jpg"
-    ]
-  },
-  {
-    templeName: "Tokyo Japan Temple",
-    location: "Tokyo, Japan",
-    dedicated: "1980-10-27",
-    area: 54000,
-    images: [
-      "../wdd131/images/tokyo_japan_temple_1.webp",
-      "../wdd131/images/tokyo_japan_temple_2.jpg"
-    ]
-  },
-  {
-    templeName: "Mexico City Mexico Temple",
-    location: "Mexico City, Mexico",
-    dedicated: "1983-12-02",
-    area: 70000,
-    images: [
-      "../wdd131/images/mexico_city_temple_1.webp",
-      "../wdd131/images/mexico_city_temple_2.jpg"
-    ]
-  },
-  {
-    templeName: "Accra Ghana Temple",
-    location: "Accra, Ghana",
-    dedicated: "2004-01-11",
-    area: 35000,
-    images: [
-      "../wdd131/images/accra_ghana_temple_1.jpeg",
-      "../wdd131/images/accra_ghana_temple_2.jpeg"
-    ]
-  },
-  {
-    templeName: "Mount Timpanogos Temple",
-    location: "American Fork, Utah",
-    dedicated: "1996-09-21",
-    area: 95000,
-    images: [
-      "../wdd131/images/mount_timpanogos_temple_1.webp",
-      "../wdd131/images/mount_timpanogos_temple_2.jpg"
-    ]
-  },
-  {
-    templeName: "Kansas City Temple",
-    location: "Kansas City, Missouri",
-    dedicated: "2012-08-30",
-    area: 45000,
-    images: [
-      "../wdd131/images/kansas-city-1.jpg",
-      "../wdd131/images/kansas-city-2.jpg",
-      "../wdd131/images/kansas-city-3.jpg",
-      "../wdd131/images/kansas-city-4.jpg",
-      "../wdd131/images/kansas-city-5.jpg",
-      "../wdd131/images/kansas-city-6.jpg",
-      "../wdd131/images/kansas-city-7.jpg",
-      "../wdd131/images/kansas-city-8.jpg",
-      "../wdd131/images/kansas-city-9.jpg",
-      "../wdd131/images/kansas-city-10.jpg"
-    ]
-  }
-];
 
-function displayTemples(temples) {
-  const container = document.querySelector("#temples");
-
-  temples.forEach(temple => {
-    const card = document.createElement("section");
-
-    const title = document.createElement("h2");
-    title.textContent = temple.templeName;
-
-    const location = document.createElement("p");
-    location.textContent = `Location: ${temple.location}`;
-
-    const dedication = document.createElement("p");
-    dedication.textContent = `Dedicated: ${temple.dedicated}`;
-
-    const area = document.createElement("p");
-    area.textContent = `Area: ${temple.area.toLocaleString()} sq ft`;
-
-    const imageGallery = document.createElement("div");
-    imageGallery.classList.add("temple-gallery");
-
-    temple.images.forEach(url => {
-      const img = document.createElement("img");
-      img.src = url;
-      img.alt = `${temple.templeName} photo`;
-      img.loading = "lazy";
-      img.onerror = () => {
-        console.error("Image failed to load:", img.src);
-      };
-      imageGallery.appendChild(img);
-    });
-
-    card.appendChild(title);
-    card.appendChild(location);
-    card.appendChild(dedication);
-    card.appendChild(area);
-    card.appendChild(imageGallery);
-    container.appendChild(card);
-  });
-}
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  displayTemples(temples);
-});
-
-  // Fetch temple data and initialize
+  // --------- Fetch temple data and initialize ---------
   fetch("data/temples.json")
-  .then(res => res.json())
-  .then(data => {
-    // Group temples by name and images
-    allTemples = groupTemplesByName(data);
+    .then(res => res.json())
+    .then(data => {
+      // Group temples by name and aggregate images
+      allTemples = groupTemplesByName(data);
 
-    // Show all temples initially
-    outputTemples(allTemples);
+      // Show all temples initially
+      outputTemples(allTemples);
 
-    // Setup filter buttons
-    setupFilterButtons();
-  })
-  .catch(error => console.error("Error fetching temples data:", error));
-  // Group temples by name and aggregate images
+      // Setup filter buttons
+      setupFilterButtons();
+    })
+    .catch(error => console.error("Error fetching temples data:", error));
+
+  // --------- Group temples by name and merge images ---------
   function groupTemplesByName(temples) {
     const grouped = {};
     temples.forEach(temple => {
@@ -209,16 +52,18 @@ document.addEventListener("DOMContentLoaded", () => {
           images: []
         };
       }
-      grouped[temple.templeName].images.push(temple.imageUrl);
+      if (Array.isArray(temple.images)) {
+        grouped[temple.templeName].images.push(...temple.images);
+      }
     });
     return Object.values(grouped);
   }
 
-  // Display temple cards with image gallery
+  // --------- Render temples to the page ---------
   function outputTemples(temples) {
     const container = document.querySelector(".temple-grid");
     if (!container) return;
-    container.innerHTML = "";
+    container.innerHTML = ""; // Clear previous content
 
     temples.forEach(temple => {
       const card = document.createElement("div");
@@ -244,13 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function updateAriaPressed(clickedButton) {
-    document.querySelectorAll('.filters button').forEach(btn => {
-      btn.setAttribute('aria-pressed', btn === clickedButton ? 'true' : 'false');
-    });
-  }
-
-  // Filter temples and update display
+  // --------- Filter temples by criteria ---------
   function filterTemples(filter) {
     let filtered = allTemples;
     switch (filter) {
@@ -273,18 +112,25 @@ document.addEventListener("DOMContentLoaded", () => {
     outputTemples(filtered);
   }
 
-  // Attach event listeners to filter buttons by ID
+  // --------- Setup event listeners for filter buttons ---------
   function setupFilterButtons() {
     const filters = ['all', 'old', 'new', 'large', 'small'];
     filters.forEach(filter => {
       const btn = document.getElementById(filter);
       if (btn) {
-        btn.addEventListener('click', () => filterTemples(filter));
+        btn.addEventListener('click', () => {
+          filterTemples(filter);
+          updateAriaPressed(btn);
+        });
       }
     });
   }
-  document.getElementById('year').textContent = new Date().getFullYear();
-  document.getElementById('lastModified').textContent = document.lastModified;
+
+  // --------- Update aria-pressed for accessibility ---------
+  function updateAriaPressed(clickedButton) {
+    document.querySelectorAll('.filters button').forEach(btn => {
+      btn.setAttribute('aria-pressed', btn === clickedButton ? 'true' : 'false');
+    });
+  }
+
 });
-
-
