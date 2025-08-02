@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const select = document.getElementById("productName");
+  const select = document.getElementById("reviewForm");
 
   // Populate product select options dynamically
   products.forEach(product => {
@@ -9,3 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
     select.appendChild(option);
   });
 });
+
+ form.addEventListener("submit"), (event) => {
+    const checkboxes = form.querySelectorAll('input[name="features"]:checked');
+
+     // Just logging the count (you can do more with this)
+    console.log(`You selected ${checkboxes.length} features.`);
+ }
