@@ -176,6 +176,8 @@ function displayTemples(temples) {
     container.appendChild(card);
   });
 }
+// Call renderTemples on page load
+renderTemples(temples);
 
 document.addEventListener("DOMContentLoaded", () => {
   displayTemples(temples);
