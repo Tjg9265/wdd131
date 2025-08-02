@@ -1,29 +1,29 @@
 .roboto-slab-100 {
   font-family: "Roboto Slab", serif;
-  font-optical-sizing: auto;
   font-weight: 100;
   font-style: normal;
+  font-optical-sizing: auto; /* Not W3C-validated, but supported in modern browsers */
 }
 
 .roboto-slab-300 {
   font-family: "Roboto Slab", serif;
-  font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  font-optical-sizing: auto; /* Not W3C-validated, but supported in modern browsers */
 }
 
 .roboto-slab-400 {
   font-family: "Roboto Slab", serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  font-optical-sizing: auto; /* Not W3C-validated, but supported in modern browsers */
 }
 
 .roboto-slab-700 {
   font-family: "Roboto Slab", serif;
-  font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+  font-optical-sizing: auto; /* Not W3C-validated, but supported in modern browsers */
 }
 
 /* CSS Variables for colors */
