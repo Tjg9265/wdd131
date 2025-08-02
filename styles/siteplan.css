@@ -1,0 +1,53 @@
+:root {
+  --primary-color: #4A3F35;  /* Warm brown for headings */
+  --accent-color: #88AB8E;   /* Soft green for buttons and highlights */
+  --bg-color: #fefcf9;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--bg-color);
+  color: #333;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
+}
+
+header {
+  border-bottom: 3px solid var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+.color-swatch {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  margin: 0.5rem 1rem 0.5rem 0;
+  line-height: 40px;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.primary { background-color: var(--primary-color); }
+.accent { background-color: var(--accent-color); }
+
+.wireframes img {
+  max-width: 100%;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
