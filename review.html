@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Review Confirmation</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h1>Thank you for your review!</h1>
+  <p id="counterMessage" aria-live="polite"></p>
+
+  <footer>
+    <p>© 2025 Your Name - WDD 131</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let count = localStorage.getItem("reviewCount");
+      count = count ? parseInt(count) : 0;
+      count++;
+      localStorage.setItem("reviewCount", count);
+
+      const message = document.getElementById("counterMessage");
+      message.textContent = `You have submitted ${count} review${count > 1 ? "s" : ""}.`;
+    });
+  </script>
+</body>
+</html>

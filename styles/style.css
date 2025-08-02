@@ -1,0 +1,102 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 10px;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #efac3e;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Required field indicator */
+.required {
+  color: red;
+  margin-left: 2px;
+}
+
+/* Inputs and selects */
+input[type="text"],
+select,
+textarea,
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Textarea */
+textarea {
+  resize: vertical;
+}
+
+/* Fieldsets */
+fieldset {
+  border: 1px solid #ccc;
+  padding: 10px 15px 15px 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+/* Radio and checkbox labels inline */
+fieldset label {
+  font-weight: normal;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+/* Submit button */
+input[type="submit"] {
+  margin-top: 25px;
+  background-color: #efac3e;
+  border: none;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: #d18b2d;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #666;
+}
+
+/* Responsive for smaller devices */
+@media (max-width: 480px) {
+  fieldset label {
+    display: block;
+    margin-bottom: 10px;
+  }
+}

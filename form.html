@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <h1>Product Review Form</h1>
+
+  <form method="get" action="review.html" id="reviewForm" novalidate>
+
+    <!-- Product Name -->
+    <label for="productName">Product Name <span aria-hidden="true" class="required">*</span></label>
+    <select id="productName" name="productName" required aria-required="true">
+      <option value="" disabled selected>Select a Product ...</option>
+      <!-- Populated by JS -->
+    </select>
+
+    <!-- Overall Rating -->
+    <fieldset>
+      <legend>Overall Rating <span aria-hidden="true" class="required">*</span></legend>
+      <label for="rating1">
+        <input type="radio" id="rating1" name="rating" value="1" required aria-required="true" /> 1 ☆
+      </label>
+      <label for="rating2">
+        <input type="radio" id="rating2" name="rating" value="2" /> 2 ☆
+      </label>
+      <label for="rating3">
+        <input type="radio" id="rating3" name="rating" value="3" /> 3 ☆
+      </label>
+      <label for="rating4">
+        <input type="radio" id="rating4" name="rating" value="4" /> 4 ☆
+      </label>
+      <label for="rating5">
+        <input type="radio" id="rating5" name="rating" value="5" /> 5 ☆
+      </label>
+    </fieldset>
+
+    <!-- Date of Installation -->
+    <label for="installDate">Date of Installation <span aria-hidden="true" class="required">*</span></label>
+    <input type="date" id="installDate" name="installDate" required aria-required="true" />
+
+    <!-- Useful Features -->
+    <fieldset>
+      <legend>Useful Features (check all that apply)</legend>
+      <label for="feature1">
+        <input type="checkbox" id="feature1" name="features" value="Easy Setup" /> Easy Setup
+      </label>
+      <label for="feature2">
+        <input type="checkbox" id="feature2" name="features" value="Durability" /> Durability
+      </label>
+      <label for="feature3">
+        <input type="checkbox" id="feature3" name="features" value="Performance" /> Performance
+      </label>
+    </fieldset>
+
+    <!-- Written Review -->
+    <label for="writtenReview">Written Review (optional)</label>
+    <textarea id="writtenReview" name="writtenReview" rows="5"></textarea>
+
+    <!-- User Name -->
+    <label for="userName">User Name (optional)</label>
+    <input type="text" id="userName" name="userName" />
+
+    <!-- Submit -->
+    <input type="submit" value="Submit Review" />
+
+  </form>
+
+  <footer>
+    <p>© 2025 Your Name - WDD 131</p>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>
