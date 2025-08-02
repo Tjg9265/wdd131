@@ -45,6 +45,141 @@ document.addEventListener("DOMContentLoaded", () => {
   // --------- Temple JSON fetch, grouping, displaying & filtering ---------
   const url = "../wdd131/data/temples.json";
   let allTemples = [];
+  const temples = [
+  {
+    templeName: "Salt Lake Temple",
+    location: "Salt Lake City, Utah",
+    dedicated: "1893-04-06",
+    area: 253015,
+    images: [
+      "../wdd131/images/salt_lake_temple_1.webp",
+      "../wdd131/images/salt_lake_temple_2.webp"
+    ]
+  },
+  {
+    templeName: "Los Angeles California Temple",
+    location: "Los Angeles, California",
+    dedicated: "1956-03-11",
+    area: 89000,
+    images: [
+      "../wdd131/images/los_angeles_temple_1.webp",
+      "../wdd131/images/los_angeles_temple_2.png"
+    ]
+  },
+  {
+    templeName: "Rome Italy Temple",
+    location: "Rome, Italy",
+    dedicated: "2019-03-10",
+    area: 58000,
+    images: [
+      "../wdd131/images/rome_italy_temple_1.webp",
+      "../wdd131/images/rome_italy_temple_2.jpg"
+    ]
+  },
+  {
+    templeName: "Tokyo Japan Temple",
+    location: "Tokyo, Japan",
+    dedicated: "1980-10-27",
+    area: 54000,
+    images: [
+      "../wdd131/images/tokyo_japan_temple_1.webp",
+      "../wdd131/images/tokyo_japan_temple_2.jpg"
+    ]
+  },
+  {
+    templeName: "Mexico City Mexico Temple",
+    location: "Mexico City, Mexico",
+    dedicated: "1983-12-02",
+    area: 70000,
+    images: [
+      "../wdd131/images/mexico_city_temple_1.webp",
+      "../wdd131/images/mexico_city_temple_2.jpg"
+    ]
+  },
+  {
+    templeName: "Accra Ghana Temple",
+    location: "Accra, Ghana",
+    dedicated: "2004-01-11",
+    area: 35000,
+    images: [
+      "../wdd131/images/accra_ghana_temple_1.jpeg",
+      "../wdd131/images/accra_ghana_temple_2.jpeg"
+    ]
+  },
+  {
+    templeName: "Mount Timpanogos Temple",
+    location: "American Fork, Utah",
+    dedicated: "1996-09-21",
+    area: 95000,
+    images: [
+      "../wdd131/images/mount_timpanogos_temple_1.webp",
+      "../wdd131/images/mount_timpanogos_temple_2.jpg"
+    ]
+  },
+  {
+    templeName: "Kansas City Temple",
+    location: "Kansas City, Missouri",
+    dedicated: "2012-08-30",
+    area: 45000,
+    images: [
+      "../wdd131/images/kansas-city-1.jpg",
+      "../wdd131/images/kansas-city-2.jpg",
+      "../wdd131/images/kansas-city-3.jpg",
+      "../wdd131/images/kansas-city-4.jpg",
+      "../wdd131/images/kansas-city-5.jpg",
+      "../wdd131/images/kansas-city-6.jpg",
+      "../wdd131/images/kansas-city-7.jpg",
+      "../wdd131/images/kansas-city-8.jpg",
+      "../wdd131/images/kansas-city-9.jpg",
+      "../wdd131/images/kansas-city-10.jpg"
+    ]
+  }
+];
+
+function displayTemples(temples) {
+  const container = document.querySelector("#temples");
+
+  temples.forEach(temple => {
+    const card = document.createElement("section");
+
+    const title = document.createElement("h2");
+    title.textContent = temple.templeName;
+
+    const location = document.createElement("p");
+    location.textContent = `Location: ${temple.location}`;
+
+    const dedication = document.createElement("p");
+    dedication.textContent = `Dedicated: ${temple.dedicated}`;
+
+    const area = document.createElement("p");
+    area.textContent = `Area: ${temple.area.toLocaleString()} sq ft`;
+
+    const imageGallery = document.createElement("div");
+    imageGallery.classList.add("temple-gallery");
+
+    temple.images.forEach(url => {
+      const img = document.createElement("img");
+      img.src = url;
+      img.alt = `${temple.templeName} photo`;
+      img.loading = "lazy";
+      img.onerror = () => {
+        console.error("Image failed to load:", url);
+      };
+      imageGallery.appendChild(img);
+    });
+
+    card.appendChild(title);
+    card.appendChild(location);
+    card.appendChild(dedication);
+    card.appendChild(area);
+    card.appendChild(imageGallery);
+    container.appendChild(card);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  displayTemples(temples);
+});
 
   // Fetch temple data and initialize
   fetch("data/temples.json")
@@ -108,6 +243,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function updateAriaPressed(clickedButton) {
+    document.querySelectorAll('.filters button').forEach(btn => {
+      btn.setAttribute('aria-pressed', btn === clickedButton ? 'true' : 'false');
+    });
+  }
+
   // Filter temples and update display
   function filterTemples(filter) {
     let filtered = allTemples;
@@ -141,6 +282,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('lastModified').textContent = document.lastModified;
 });
 
 

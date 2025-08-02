@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Temple Picture Album" />
-    <meta name="author" content="Thomas Garcia" />
-    <title>Temple Album</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Ovo&family=Roboto+Slab:wght@100..900&family=Rubik+Dirt&family=Rye&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/temples-large.css" />
-    <link rel="stylesheet" href="styles/filtered-temples.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Temple Picture Album" />
+  <meta name="author" content="Thomas Garcia" />
+  <title>Temple Album</title>
+
+  <!-- Preconnect once -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Combined Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ovo&family=Roboto+Slab:wght@100..900&family=Rubik+Dirt&family=Rye&family=Roboto&display=swap" rel="stylesheet" />
+
+  <!-- CSS stylesheets -->
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/temples-large.css" />
+  <link rel="stylesheet" href="styles/filtered-temples.css" />
+</head>
   <body>
     <header>
       <h1>Temple Picture Album</h1>
@@ -36,12 +36,12 @@
 
     <main>
       <section class="filters" role="group" aria-label="Filter Temples">
-  <button onclick="filterTemples('all')" aria-pressed="false">All</button>
-  <button onclick="filterTemples('old')" aria-pressed="false">Old</button>
-  <button onclick="filterTemples('new')" aria-pressed="false">New</button>
-  <button onclick="filterTemples('large')" aria-pressed="false">Large</button>
-  <button onclick="filterTemples('small')" aria-pressed="false">Small</button>
-</section>
+        <button data-filter="all" aria-pressed="false">All</button>
+        <button data-filter="old" aria-pressed="false">Old</button>
+        <button data-filter="new" aria-pressed="false">New</button>
+        <button data-filter="large" aria-pressed="false">Large</button>
+        <button data-filter="small" aria-pressed="false">Small</button>
+      </section>
 
       <div id="temple-cards" class="temple-grid" tabindex="0">
         <!-- Cards will be injected here by JS -->
@@ -53,7 +53,7 @@
       <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js" defer></script>
     <script>
       // Attach event listeners for filter buttons (cleaner than inline onclick)
       document.querySelectorAll('.filters button').forEach(button => {
