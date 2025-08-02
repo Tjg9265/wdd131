@@ -163,7 +163,7 @@ function displayTemples(temples) {
       img.alt = `${temple.templeName} photo`;
       img.loading = "lazy";
       img.onerror = () => {
-        console.error("Image failed to load:", url);
+        console.error("Image failed to load:", img.src);
       };
       imageGallery.appendChild(img);
     });
