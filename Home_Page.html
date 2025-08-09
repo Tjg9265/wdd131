@@ -8,17 +8,18 @@
   <script src="scripts/main.js" defer></script>
 </head>
 <body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
   <header>
-    <h1>My Project</h1>
+    <p class="site-title">My Project</p>
     <button id="menu" aria-label="Menu" aria-expanded="false">☰</button>
-    <nav class="navigation">
+    <nav class="navigation" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
+  <main id="mainContent">
     <section class="hero">
         <div class="hero-content">
             <h1>Welcome to Book Haven</h1>
@@ -36,7 +37,13 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Your Name | <a href="references.html">References</a></p>
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="references.html">References</a>
+    </nav>
+    <p>&copy; 2025 Thomas Garcia | <a href="references.html">References</a></p>
   </footer>
 </body>
 </html>
