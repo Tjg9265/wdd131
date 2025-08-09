@@ -1,12 +1,20 @@
+:root {
+  --primary-color: #4A3F35;  /* Warm brown for headings */
+  --accent-color: #88AB8E;   /* Soft green for buttons and highlights */
+  --bg-color: #fefcf9;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: var(--bg-color);
+  color: #333;
 }
 
 header, footer {
-  background-color: #333;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
   padding: 1rem;
 }
 
@@ -19,7 +27,7 @@ nav.open {
 }
 
 nav a {
-  color: white;
+  color: var(--accent-color);
   margin-right: 1rem;
   text-decoration: none;
 }
@@ -45,7 +53,7 @@ form {
 }
 
 .hero {
-  background-image: url('../images/hero-bookshelf.webp'); /* Replace with your own image path */
+  background-image: url('../wdd131/images/reading.jpg'); /* Replace with your own image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -76,6 +84,8 @@ form {
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  /* Use white here for contrast on dark overlay */
+  color: #fff;
 }
 
 .hero p {
@@ -84,17 +94,23 @@ form {
 }
 
 .hero-button {
-  background-color: #f4b400;
-  color: black;
+  background-color: var(--bg-color);
+  color: var(--accent-color);
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   font-weight: bold;
   border-radius: 8px;
   transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
 }
 
-.hero-button:hover {
-  background-color: #d99900;
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #d99900; /* Optional: keep accent or tweak */
+  color: #fff;
+  outline: none;
 }
 
 .about-hero {
@@ -108,10 +124,11 @@ form {
   margin: 2rem auto;
   padding: 1rem;
   line-height: 1.6;
+  color: #333;
 }
 
 .about-content h2 {
-  color: #444;
+  color: var(--primary-color);
   margin-top: 2rem;
 }
 

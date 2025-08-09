@@ -2,71 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact Us</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact Book Haven for inquiries, feedback, or support.">
+  <meta name="description" content="Contact Readers' Haven for inquiries and feedback." />
   <meta name="author" content="Thomas Garcia" />
+  <title>Contact | Readers' Haven</title>
   <link rel="stylesheet" href="styles/home.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <script src="scripts/home.js" defer></script>
 </head>
 <body>
-  <a href="#mainContent" class="skip-link">Skip to main content</a>
   <header>
-    <h1>My Project</h1>
-    <button id="menu" aria-label="Menu" aria-expanded="false">☰</button>
-    <nav class="navigation">
+    <h1>Readers' Haven</h1>
+    <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a href="references.html">References</a>
     </nav>
   </header>
 
   <main>
-    <h2>Contact Us</h2>
-    <form id="contactForm" action="#" method="post" aria-labelledby="contactHeading">
-      <form 
-      id="contactForm" 
-      action="#" 
-      method="post" 
-      aria-labelledby="contactHeading"
-    >
-      <fieldset>
-        <legend id="contactHeading">Contact Form</legend>
-
+    <section>
+      <section class="contact-hero">
+      <img src="../wdd131/images/contact-us.jpg" alt="We love to hear feedback about our recommendations." loading="lazy" />
+      <h2>Contact Us</h2>
+      <form id="contactForm" action="#" method="post">
         <label for="name">Name:</label>
-        <input 
-          type="text" 
-          id="name" 
-          name="name" 
-          aria-required="true" 
-          required 
-        />
+        <input type="text" id="name" name="name" required />
 
         <label for="email">Email:</label>
-        <input 
-          type="email" 
-          id="email" 
-          name="email" 
-          aria-required="true" 
-          required 
-        />
+        <input type="email" id="email" name="email" required />
 
         <label for="message">Message:</label>
-        <textarea 
-          id="message" 
-          name="message" 
-          aria-required="true" 
-          required
-        ></textarea>
-      </fieldset>  
+        <textarea id="message" name="message" required></textarea>
 
-      <button type="submit">Submit</button>
-    </form>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Book Haven | Designed by Thomas Garcia | <a href="references.html">References</a></p>
+    <p>&copy; 2025 Thomas Garcia | <a href="references.html">Image Credits</a></p>
   </footer>
 </body>
 </html>
